@@ -6,12 +6,12 @@ import (
 	"github.com/StarContract/wasm-warp-avm/src/types"
 )
 
-type PstContract struct {
+type StarContract struct {
 	state types.PstState
 }
 
 // Handle the function that contract developers actually need to implement
-func (c *PstContract) Handle(action common_types.Action, actionBytes []byte) (interface{}, common_types.ActionResult, error) {
+func (c *StarContract) Handle(action common_types.Action, actionBytes []byte) (interface{}, common_types.ActionResult, error) {
 	fn := action.Function
 
 	// this is how you can access functions imported from js
@@ -68,7 +68,7 @@ func (c *PstContract) Handle(action common_types.Action, actionBytes []byte) (in
 	}
 }
 
-func (c *PstContract) InitState(stateJson string) {
+func (c *StarContract) InitState(stateJson string) {
 	var state types.PstState
 	err := state.UnmarshalJSON([]byte(stateJson))
 	if err != nil {
@@ -77,17 +77,17 @@ func (c *PstContract) InitState(stateJson string) {
 	c.UpdateState(&state)
 }
 
-func (c *PstContract) UpdateState(newState interface{}) {
+func (c *StarContract) UpdateState(newState interface{}) {
 	// note: we're first type asserting here to the pointer to types.PstState
 	// - and then retrieving value from the pointer
 	c.state = *(newState.(*types.PstState))
 }
 
-func (c *PstContract) CurrentState() interface{} {
+func (c *StarContract) CurrentState() interface{} {
 	return c.state
 }
 
-func (c *PstContract) CloneState() interface{} {
+func (c *StarContract) CloneState() interface{} {
 	json, _ := c.state.MarshalJSON()
 	state := types.PstState{}
 	err := state.UnmarshalJSON(json)

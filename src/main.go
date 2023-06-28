@@ -6,7 +6,7 @@ import (
 )
 
 // contract - implementation of the SwContract interface
-var contract = impl.PstContract{}
+var contract = impl.StarContract{}
 
 // handles all the WASM-JS related trickery...
 func main() {

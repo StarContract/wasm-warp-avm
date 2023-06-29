@@ -145,3 +145,37 @@ Optionally - you can run one of the scripts which uses Warp SDK to interact with
 ```
 
 3. `transfer` - transfer specific amount of tokens to the indicated wallet, check out the code in [deploy/scripts/interact-transfer.js](deploy/scripts/interact-transfer.js)
+
+##🧑‍💻ImgContract
+
+This is a custom contract example that includes methods for uploading and cropping images.
+Here are the usage steps:
+
+1.
+```bash
+yarn generate
+```
+2.
+```bash
+yarn build
+```
+3.
+```bash
+npx arlocal
+```
+4.
+```
+yarn deploy:local
+```
+5.
+```
+npm run read:local
+```
+6.
+```
+node deploy/local/interact-upLoad-local.js
+```
+7.
+```
+node deploy/local/interact-cropImg-local.js
+```

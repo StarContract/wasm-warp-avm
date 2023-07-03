@@ -2,7 +2,7 @@
 
 > ⚠️ This template is using previous version of Warp SDK API (`1.0.1`). It will soon be updated to the `1.2.x` version.
 
-Following repository is a template for writing SmartWeave contracts in Go and building them into WASM binaries which can be then processed by Warp SDK.
+Following repository is a template for writing SmartWeave contracts in Go and building them into WASM binaries which can be then processed by Warp SDK.We will implement our virtual machine execution SmartWeave contract in the future.
 
 It contains an example implementation of a PST contract - which you can use as a base for implementing your own contract.
 If you are not familiar with the concept of Profit Sharing Tokens, check out a [tutorial](https://academy.warp.cc/docs/pst/introduction/intro) for writing your first PST contract in our Warp Academy.
